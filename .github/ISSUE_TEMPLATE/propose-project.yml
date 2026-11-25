@@ -1,0 +1,22 @@
+name: Propose a project
+description: Suggest an open source repo that runs an AI software factory
+labels: [candidate]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository (owner/name)
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to bot PRs, labels, workflows or a maintainer write-up. At least one primary source.
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level you think it reaches
+      options: ["L1 · Triage", "L2 · On-demand", "L3 · Pipeline", "L4 · Lights-out", "Not sure"]
