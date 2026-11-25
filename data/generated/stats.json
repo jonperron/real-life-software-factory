@@ -1,0 +1,109 @@
+{
+  "_updated": "2026-11-25",
+  "career-ops-hq/career-ops": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-11-25T10:53:56Z",
+    "stars": 84820
+  },
+  "dotnet/runtime": {
+    "archived": false,
+    "evidence_total": 1842,
+    "license": "MIT",
+    "pushed_at": "2026-11-25T20:51:40Z",
+    "stars": 18466
+  },
+  "emdash-cms/emdash": {
+    "archived": false,
+    "evidence_total": 57,
+    "license": "MIT",
+    "pushed_at": "2026-11-25T20:57:03Z",
+    "stars": 14601
+  },
+  "fabro-sh/fabro": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-11-23T13:55:52Z",
+    "stars": 1893
+  },
+  "github/gh-aw": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-11-25T20:57:01Z",
+    "stars": 5693
+  },
+  "jimbobbennett/software-factory": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-10-21T00:47:07Z",
+    "stars": 2
+  },
+  "mastra-ai/mastra": {
+    "archived": false,
+    "license": "NOASSERTION",
+    "pushed_at": "2026-11-25T20:58:09Z",
+    "stars": 29817
+  },
+  "metabase/metabase": {
+    "archived": false,
+    "license": "NOASSERTION",
+    "pushed_at": "2026-11-25T20:58:31Z",
+    "stars": 50533
+  },
+  "strongdm/attractor": {
+    "archived": false,
+    "license": "Apache-2.0",
+    "pushed_at": "2026-03-17T21:33:21Z",
+    "stars": 1351
+  },
+  "strongdm/cxdb": {
+    "archived": false,
+    "license": "Apache-2.0",
+    "pushed_at": "2026-08-28T19:12:14Z",
+    "stars": 527
+  },
+  "supaku/agentfactory": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-11-09T22:46:09Z",
+    "stars": 66
+  },
+  "twbs/bootstrap": {
+    "archived": false,
+    "license": "MIT",
+    "pushed_at": "2026-11-25T19:03:34Z",
+    "stars": 175134
+  },
+  "vercel/ai": {
+    "archived": false,
+    "evidence_total": 2228,
+    "license": "NOASSERTION",
+    "pushed_at": "2026-11-25T20:36:51Z",
+    "stars": 28205
+  },
+  "warpdotdev/warp": {
+    "archived": false,
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-11-25T20:00:53Z",
+    "stars": 66139
+  },
+  "withastro/astro": {
+    "archived": false,
+    "evidence_total": 0,
+    "license": "NOASSERTION",
+    "pushed_at": "2026-11-25T19:12:55Z",
+    "stars": 64205
+  },
+  "withastro/flue": {
+    "archived": false,
+    "license": "Apache-2.0",
+    "pushed_at": "2026-11-18T08:57:27Z",
+    "stars": 8703
+  },
+  "withastro/triagebot-action": {
+    "archived": false,
+    "license": null,
+    "pushed_at": "2026-08-28T12:56:56Z",
+    "stars": 234
+  }
+}
