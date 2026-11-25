@@ -1,0 +1,15 @@
+name: Attractor
+url: https://github.com/strongdm/attractor
+repo: strongdm/attractor
+license: Apache-2.0
+category: spec
+summary: >-
+  StrongDM's non-interactive coding agent published as natural-language specs
+  (NLSpecs) that your own agent implements. Reference design behind the
+  "lights-out" software factory; several community implementations exist.
+sources:
+  - title: StrongDM Software Factory (Simon Willison)
+    url: https://simonwillison.net/2026/feb/7/software-factory/
+    date: 2026-02-07
+  - title: Attractor community implementations
+    url: https://factory.strongdm.ai/products/attractor

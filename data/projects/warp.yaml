@@ -1,0 +1,31 @@
+name: Warp
+repo: warpdotdev/warp
+license: AGPL-3.0-only
+status: production
+summary: >-
+  Open-sourced in April 2026 with an agent-first contribution model: Oz cloud
+  agents triage issues, ask clarifying questions, write specs and code and open
+  PRs in public; the community shapes specs and the Warp team reviews and ships.
+factory:
+  name: Oz
+  since: 2026-04
+  level: 3
+  stages: [intake, triage, plan, implement, review, community]
+  human_gates: [spec, merge]
+  factory_code: closed
+  stack:
+    orchestration: Oz (proprietary)
+    models: GPT models (OpenAI is founding sponsor of the repo)
+  evidence_query: ""
+sources:
+  - title: Warp is now open-source (Zach Lloyd)
+    url: https://warp.dev/blog/warp-is-now-open-source
+    date: 2026-04-28
+  - title: Warp open-sources its agentic development environment (press release)
+    url: https://www.warp.dev/newsroom/2026/4/28/warp-open-sources-its-agentic-development-environment
+    date: 2026-04-28
+  - title: Live agent dashboard
+    url: https://build.warp.dev
+notes: >-
+  Client is open source; server, Warp Drive backend and Oz are proprietary.
+  Some crates are MIT-licensed; the rest is AGPL-3.0.

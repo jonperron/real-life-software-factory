@@ -1,0 +1,35 @@
+name: Astro
+repo: withastro/astro
+license: MIT
+status: production
+summary: >-
+  Isolated agents in GitHub Actions reproduce, diagnose and propose fixes for
+  every new issue, passing context through a report.md; reporters verify the
+  bot's fix before maintainers review it.
+factory:
+  name: Astro triage bot (triagebot-action + Flue)
+  level: 3
+  stages: [intake, triage, reproduce, diagnose, implement]
+  human_gates: [merge]
+  factory_code: open
+  factory_repo: withastro/triagebot-action
+  stack:
+    orchestration: Flue, GitHub Actions
+    models: Cloudflare Workers AI (Kimi K2.6) for verification; Anthropic/OpenAI pluggable
+  evidence_query: "is:issue label:\"triage: fix verified\""
+metrics:
+  - label: Open issues
+    value: "200+ → ~30 (−85%)"
+    as_of: 2026-08
+    source: https://infoq.com/news/2026/08/cloudflare-astro-ai-agents
+sources:
+  - title: How we built a software factory to drive Astro's GitHub issue count to zero (Cloudflare)
+    url: https://blog.cloudflare.com/astro-issue-triage/
+  - title: Cloudflare Cuts Astro GitHub Issues by 85% with AI Agents (InfoQ)
+    url: https://infoq.com/news/2026/08/cloudflare-astro-ai-agents
+  - title: Cloudflare Astro triage bot (The New Stack)
+    url: https://thenewstack.io/cloudflare-astro-triage-bot/
+    date: 2026-08-04
+notes: >-
+  Fred Schott calls "fix" the hardest and least essential stage: triage first,
+  hand a report to a human.

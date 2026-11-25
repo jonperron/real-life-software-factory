@@ -1,0 +1,32 @@
+name: Bootstrap
+repo: twbs/bootstrap
+license: MIT
+status: production
+summary: >-
+  Claude Code agents analyse every open issue and PR, try to reproduce, and
+  prepare draft answers and fix branches in a separate repo. Agents cannot
+  comment, push or open PRs on Bootstrap itself; maintainers act.
+factory:
+  name: twbs/triage
+  level: 1
+  stages: [triage, reproduce, diagnose, implement]
+  human_gates: [decision, merge, public-comms]
+  stack:
+    agents: Claude Code background agents
+  evidence_query: ""
+metrics:
+  - label: Open issues + PRs
+    value: "500+ → 230"
+    as_of: 2026-10
+    source: https://blog.getbootstrap.com/2026/10/15/triaging-bootstrap-with-claude-agents/
+  - label: Labels applied by agents (allowlisted)
+    value: "410 across 198 items"
+    as_of: 2026-10
+    source: https://blog.getbootstrap.com/2026/10/15/triaging-bootstrap-with-claude-agents/
+sources:
+  - title: Triaging open source with agents (Bootstrap blog)
+    url: https://blog.getbootstrap.com/2026/10/15/triaging-bootstrap-with-claude-agents/
+    date: 2026-10-15
+notes: >-
+  Good reference for prompt-injection hygiene: contributor content is untrusted,
+  no contributor code is run, suspicious items held for manual review.

@@ -1,0 +1,13 @@
+name: GitHub Agentic Workflows
+url: https://github.com/github/gh-aw
+repo: github/gh-aw
+license: unknown
+category: workflow-engine
+summary: >-
+  Agentic workflows written in Markdown and run on GitHub Actions; the
+  githubnext/agentics repo ships ready-made workflows (Issue Arborist, Sub Issue
+  Closer, ...).
+used_by: [github/gh-aw]
+sources:
+  - title: "Meet the Workflows: Issue & PR Management"
+    url: https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-issue-management/

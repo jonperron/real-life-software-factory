@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/OWNER/factory-floor/schema/project.schema.json",
+  "title": "Open source project running an AI software factory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "repo", "license", "summary", "factory", "sources"],
+  "properties": {
+    "name": { "type": "string", "minLength": 2 },
+    "repo": {
+      "description": "GitHub owner/name of the project the factory works on.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+    },
+    "license": {
+      "description": "SPDX id of the project's license. Must be OSI-approved (checked by CI).",
+      "type": "string"
+    },
+    "summary": { "type": "string", "minLength": 20, "maxLength": 280 },
+    "status": { "enum": ["production", "experimental"], "default": "production" },
+    "factory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "stages", "human_gates"],
+      "properties": {
+        "name": { "type": "string" },
+        "since": { "type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$" },
+        "level": {
+          "description": "1 Triage, 2 On-demand, 3 Pipeline, 4 Lights-out. See LEVELS.md.",
+          "type": "integer", "minimum": 1, "maximum": 4
+        },
+        "stages": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {
+            "enum": ["intake", "triage", "reproduce", "diagnose", "plan", "implement",
+                     "review", "test", "backport", "docs", "release", "community", "monitor"]
+          }
+        },
+        "human_gates": {
+          "description": "Where a human must act before work moves on.",
+          "type": "array", "uniqueItems": true,
+          "items": { "enum": ["trigger", "decision", "spec", "merge", "release", "public-comms", "none"] }
+        },
+        "factory_code": {
+          "description": "Is the factory itself published? open = OSI license, closed = internal/proprietary.",
+          "enum": ["open", "partial", "closed"]
+        },
+        "factory_repo": { "type": "string" },
+        "stack": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "orchestration": { "type": "string" },
+            "agents": { "type": "string" },
+            "models": { "type": "string" },
+            "sandbox": { "type": "string" }
+          }
+        },
+        "bots": { "type": "array", "items": { "type": "string" } },
+        "evidence_query": {
+          "description": "GitHub search qualifiers (without repo:) that list the factory's PRs. Used by CI to count them.",
+          "type": "string"
+        }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["label", "value", "as_of", "source"],
+        "properties": {
+          "label": { "type": "string" },
+          "value": { "type": "string" },
+          "as_of": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?$" },
+          "source": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?$" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,36 @@
+name: Mastra
+repo: mastra-ai/mastra
+license: Apache-2.0
+status: production
+summary: >-
+  Mastra dogfoods its own open source Factory: GitHub, Linear and Slack feed a
+  board (Intake → Triage → Planning → Build → Review → Done) where each stage
+  runs in manual or auto mode.
+factory:
+  name: Mastra Factory
+  since: 2026-07
+  level: 3
+  stages: [intake, triage, reproduce, plan, implement, review, docs]
+  human_gates: [decision, merge]
+  factory_code: open
+  stack:
+    orchestration: Mastra Factory (rules engine over "work" items)
+    sandbox: Mastra platform cloud sandboxes
+  evidence_query: ""
+metrics:
+  - label: Share of PRs automated by Factory (since July alpha)
+    value: "25–35%"
+    as_of: 2026-09
+    source: https://mastra.ai/blog/announcing-mastra-factory-beta
+  - label: Share of issues closed by Factory
+    value: "50–60%"
+    as_of: 2026-09
+    source: https://mastra.ai/blog/announcing-mastra-factory-beta
+sources:
+  - title: Announcing Mastra Factory Beta
+    url: https://mastra.ai/blog/announcing-mastra-factory-beta
+    date: 2026-09-08
+notes: >-
+  Full auto mode was dropped after bursty backlog imports produced hard-to-review
+  work; stages are now configurable. Code under ee/ directories is source-available,
+  the rest is Apache-2.0.

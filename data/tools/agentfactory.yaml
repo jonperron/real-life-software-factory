@@ -1,0 +1,11 @@
+name: AgentFactory
+url: https://github.com/supaku/agentfactory
+repo: supaku/agentfactory
+license: unknown
+category: factory-platform
+summary: >-
+  TypeScript orchestrator for fleets of coding agents (Claude and others) driven
+  from Linear: multi-agent fleet management for a software factory.
+sources:
+  - title: supaku/agentfactory on ecosyste.ms
+    url: https://awesome.ecosyste.ms/projects/github.com%2Fsupaku%2Fagentfactory

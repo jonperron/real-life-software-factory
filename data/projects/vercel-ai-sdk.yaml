@@ -1,0 +1,42 @@
+name: Vercel AI SDK
+repo: vercel/ai
+license: Apache-2.0
+status: production
+summary: >-
+  Specialised agents classify every incoming issue, then reproduce and fix bugs,
+  implement features, review PRs, backport to older majors and update docs.
+  A maintainer merges every change.
+factory:
+  name: ai-sdk-factory
+  since: 2026-07
+  level: 3
+  stages: [intake, triage, reproduce, implement, review, backport, docs]
+  human_gates: [merge]
+  factory_code: partial
+  stack:
+    orchestration: Vercel Functions + Vercel Queues, GitHub webhooks
+    sandbox: Vercel Sandbox (per-task secrets)
+  bots: [app/ai-sdk-factory]
+  evidence_query: "is:pr author:app/ai-sdk-factory"
+metrics:
+  - label: Share of weekly merged PRs authored by the factory
+    value: "25–35%"
+    as_of: 2026-08
+    source: https://vercel.com/blog/building-a-software-factory-for-ai-sdk
+  - label: Share of closed issues closed by the factory
+    value: "70–80%"
+    as_of: 2026-08
+    source: https://vercel.com/blog/building-a-software-factory-for-ai-sdk
+  - label: Open issues
+    value: "1,022 → 844 (late June → early Aug)"
+    as_of: 2026-08
+    source: https://vercel.com/blog/building-a-software-factory-for-ai-sdk
+sources:
+  - title: Building a software factory for AI SDK (Vercel)
+    url: https://vercel.com/blog/building-a-software-factory-for-ai-sdk
+    date: 2026-08-12
+  - title: "PRs NOT Welcome (Latent Space)"
+    url: https://www.latent.space/p/pr-not-welcome
+notes: >-
+  The production factory is not published; Vercel links a deployable open source
+  four-agent template (see tools/eve-software-factory).

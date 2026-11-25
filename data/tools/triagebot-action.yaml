@@ -1,0 +1,13 @@
+name: triagebot-action
+url: https://github.com/withastro/triagebot-action
+repo: withastro/triagebot-action
+license: unknown
+category: triage
+summary: >-
+  GitHub Action extracted from Astro's factory: agents reproduce, diagnose and
+  verify issues before a human sees them, driven by a project-specific triage
+  skill in .agents/skills/triage.
+used_by: [withastro/astro]
+sources:
+  - title: How we built a software factory to drive Astro's GitHub issue count to zero
+    url: https://blog.cloudflare.com/astro-issue-triage/

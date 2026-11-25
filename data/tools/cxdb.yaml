@@ -1,0 +1,11 @@
+name: CXDB
+url: https://github.com/strongdm/cxdb
+repo: strongdm/cxdb
+license: unknown
+category: context-store
+summary: >-
+  Self-hosted context store for agents from StrongDM's factory: turn DAG, blob
+  deduplication, dynamic types and visual debugging.
+sources:
+  - title: StrongDM factory products
+    url: https://factory.strongdm.ai/products

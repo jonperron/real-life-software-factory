@@ -1,0 +1,30 @@
+name: GitHub Agentic Workflows (gh-aw)
+repo: github/gh-aw
+license: unknown
+status: production
+summary: >-
+  "Peli's Agent Factory": the repo runs its own agentic workflows on itself —
+  Issue Monster feeds issues one at a time to Copilot Coding Agent, Mergefest
+  keeps PR branches current, and a daily agent publishes PR analytics.
+factory:
+  name: Peli's Agent Factory
+  level: 3
+  stages: [intake, triage, implement, review, release, monitor]
+  human_gates: [merge]
+  factory_code: open
+  factory_repo: github/gh-aw
+  stack:
+    orchestration: GitHub Actions agentic workflows
+    agents: Copilot Coding Agent, copilot-pull-request-reviewer
+  evidence_query: "is:pr head:copilot/"
+metrics:
+  - label: Copilot agent PRs in 24h (daily report)
+    value: "72 opened, 48 merged (72.7%)"
+    as_of: 2026-08-05
+    source: https://github.com/github/gh-aw/discussions/50669
+sources:
+  - title: "Meet the Workflows: Issue & PR Management"
+    url: https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-issue-management/
+    date: 2026-01-13
+  - title: Copilot Agent PR Analysis 2026-08-05
+    url: https://github.com/github/gh-aw/discussions/50669

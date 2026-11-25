@@ -1,0 +1,21 @@
+name: Metabase
+repo: metabase/metabase
+license: AGPL-3.0-only
+status: production
+summary: >-
+  Repro-Bot is an issue triage agent that attempts to reproduce public GitHub
+  issues. It is run by a human on purpose, to keep poisoned issue content from
+  driving the agent.
+factory:
+  name: Repro-Bot
+  since: 2026-04
+  level: 1
+  stages: [triage, reproduce]
+  human_gates: [trigger, decision]
+  factory_code: closed
+  evidence_query: ""
+sources:
+  - title: Meet Repro-Bot, our GitHub issue triage agent (Metabase)
+    url: https://www.metabase.com/blog/reprobot-github-issue-triage-agent
+    date: 2026-04-10
+notes: Enterprise directories are under a commercial license; core is AGPL.

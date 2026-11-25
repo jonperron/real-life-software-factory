@@ -1,0 +1,21 @@
+name: Flue
+repo: withastro/flue
+license: unknown
+status: production
+summary: >-
+  Every external PR is auto-closed and turned into an issue or discussion. Once a
+  maintainer decides, agents handle research, design, implementation and first
+  review.
+factory:
+  level: 3
+  stages: [intake, plan, implement, review]
+  human_gates: [decision, merge]
+  factory_code: open
+  factory_repo: withastro/flue
+  evidence_query: ""
+sources:
+  - title: Flue contributing guide
+    url: https://github.com/withastro/flue?tab=contributing-ov-file
+  - title: "PRs NOT Welcome (Latent Space)"
+    url: https://www.latent.space/p/pr-not-welcome
+notes: Explicit goal is to prevent "drive-by AI slop PRs".

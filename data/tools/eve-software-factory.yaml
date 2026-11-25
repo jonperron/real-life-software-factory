@@ -1,0 +1,11 @@
+name: eve software factory template (Vercel)
+url: https://vercel.fyi/eve-software-factory
+license: unknown
+category: template
+summary: >-
+  One-click deployable open source factory with four agents (Classifier,
+  Analyzer, Implementer, Reviewer), derived from the AI SDK team's setup.
+sources:
+  - title: Building a software factory for AI SDK
+    url: https://vercel.com/blog/building-a-software-factory-for-ai-sdk
+    date: 2026-08-12

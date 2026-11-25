@@ -1,0 +1,13 @@
+name: Mastra Factory
+url: https://factory.mastra.ai/
+license: unknown
+category: factory-platform
+summary: >-
+  Open source, configurable factory: connect GitHub, Linear and Slack, define how
+  work moves through stages, run each stage in manual or auto mode. Scaffold with
+  `npm create factory@latest`.
+used_by: [mastra-ai/mastra]
+sources:
+  - title: Announcing Mastra Factory Beta
+    url: https://mastra.ai/blog/announcing-mastra-factory-beta
+    date: 2026-09-08

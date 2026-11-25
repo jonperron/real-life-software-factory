@@ -1,0 +1,12 @@
+name: Flue
+url: https://github.com/withastro/flue
+repo: withastro/flue
+license: unknown
+category: workflow-engine
+summary: >-
+  Framework for durable agent workflows that grew out of Astro's auto-triage;
+  connects agents to GitHub, Slack and more.
+used_by: [withastro/astro, withastro/flue, emdash-cms/emdash]
+sources:
+  - title: Cloudflare Cuts Astro GitHub Issues by 85% with AI Agents (InfoQ)
+    url: https://infoq.com/news/2026/08/cloudflare-astro-ai-agents

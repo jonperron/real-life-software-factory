@@ -1,0 +1,22 @@
+name: EmDash
+repo: emdash-cms/emdash
+license: unknown
+status: experimental
+summary: >-
+  Flue-powered investigation bot started by a maintainer label (bot:repro): it
+  reproduces the issue, labels the outcome, and can push a fix and ask the
+  reporter to verify. Modelled on Astro's setup.
+factory:
+  name: Investigate bot
+  level: 2
+  stages: [reproduce, diagnose, implement]
+  human_gates: [trigger, merge]
+  factory_code: open
+  stack:
+    orchestration: Flue in GitHub Actions
+  evidence_query: "is:issue label:triage/verified"
+sources:
+  - title: .flue/README.md
+    url: https://cdn.jsdelivr.net/gh/emdash-cms/emdash@HEAD/.flue/README.md
+  - title: Design rationale (PR #1090)
+    url: https://github.com/emdash-cms/emdash/pull/1090

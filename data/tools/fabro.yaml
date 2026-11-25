@@ -1,0 +1,14 @@
+name: Fabro
+url: https://github.com/fabro-sh/fabro
+repo: fabro-sh/fabro
+license: unknown
+category: workflow-engine
+summary: >-
+  Rust implementation of the Attractor ideas: processes as Graphviz DOT graphs
+  with branching, loops and human approval gates, model routing via stylesheets,
+  cloud sandboxes.
+sources:
+  - title: Attractor community implementations
+    url: https://factory.strongdm.ai/products/attractor
+  - title: fabro-sh/fabro on ecosyste.ms
+    url: https://awesome.ecosyste.ms/projects/github.com%2Ffabro-sh%2Ffabro

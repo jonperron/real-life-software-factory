@@ -1,0 +1,11 @@
+name: software-factory (Jim Bennett / Arize)
+url: https://github.com/jimbobbennett/software-factory
+repo: jimbobbennett/software-factory
+license: unknown
+category: template
+summary: >-
+  Small reference factory (spec, build, review, release agents with CI and a merge
+  gate) that also evaluates its own prompts; builds the ship-it-card demo app.
+sources:
+  - title: How to build a software factory that tests its own prompts (Arize)
+    url: https://arize.com/blog/how-to-build-a-software-factory-that-tests-its-own-prompts.md

@@ -1,0 +1,32 @@
+name: career-ops
+repo: career-ops-hq/career-ops
+license: MIT
+status: production
+summary: >-
+  A solo maintainer runs an 80k-star repo with a fleet of Claude Code agents:
+  maintainer/orchestrator, ephemeral verifiers in worktrees, dogfood, Discord and
+  FAQ agents, plus Codex as cross-model auditor on sensitive PRs.
+factory:
+  name: Agentic maintenance fleet
+  level: 2
+  stages: [triage, review, test, release, community, docs]
+  human_gates: [decision, merge, release, public-comms]
+  factory_code: closed
+  stack:
+    agents: Claude Code fleet; OpenAI Codex as independent auditor
+  evidence_query: ""
+metrics:
+  - label: In one documented day
+    value: "16 PRs merged, ~25 issues triaged, 1 release"
+    as_of: 2026-07-02
+    source: https://santifer.io/ai-agent-fleet
+  - label: Merged PRs since launch (all authors)
+    value: "3,506"
+    as_of: 2026-11-12
+    source: https://santifer.io/ai-agent-fleet
+sources:
+  - title: "Agentic maintenance: how I run a 73,000-star open source repo with a fleet of AI agents"
+    url: https://santifer.io/ai-agent-fleet
+  - title: career-ops CONTRIBUTING.md
+    url: https://raw.githubusercontent.com/santifer/career-ops/master/CONTRIBUTING.md
+notes: Repo moved from santifer/career-ops to career-ops-hq/career-ops.
