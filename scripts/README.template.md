@@ -1,10 +1,10 @@
 <!-- GENERATED FILE — edit data/*.yaml or scripts/README.template.md, then run `python scripts/build.py`. -->
 
-# Factory Floor
+#  Real life Software build using AI Software Factory
 
 **Open source projects that run an AI software factory in production — with receipts.**
 
-Everyone is writing about "software factories": agents that take work from an issue to a reviewed pull request. This list doesn't collect vendors or demos. It tracks **real, public open source repositories** where you can see the factory working: which stages are automated, where humans still gate the work, what it changed, and a GitHub query to check the claims yourself.
+This project tracks **real, public open source repositories** where you can see the factory working: which stages are automated, where humans still gate the work, what it changed, and a GitHub query to check the claims yourself.
 
 {{COUNT_PROJECTS}} projects · {{COUNT_TOOLS}} building blocks · live GitHub stats refreshed {{STATS_UPDATED}}
 

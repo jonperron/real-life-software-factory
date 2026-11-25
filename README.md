@@ -1,12 +1,12 @@
 <!-- GENERATED FILE — edit data/*.yaml or scripts/README.template.md, then run `python scripts/build.py`. -->
 
-# Factory Floor
+# Real life Software build using AI Software Factory
 
 **Open source projects that run an AI software factory in production — with receipts.**
 
-Everyone is writing about "software factories": agents that take work from an issue to a reviewed pull request. This list doesn't collect vendors or demos. It tracks **real, public open source repositories** where you can see the factory working: which stages are automated, where humans still gate the work, what it changed, and a GitHub query to check the claims yourself.
+This project tracks **real, public open source repositories** where you can see the factory working: which stages are automated, where humans still gate the work, what it changed, and a GitHub query to check the claims yourself.
 
-11 projects · 10 building blocks · live GitHub stats refreshed 2026-11-25
+11 projects · 10 building blocks · live GitHub stats refreshed never (run scripts/refresh_stats.py)
 
 - [Factory levels](#factory-levels)
 - [Projects](#projects)
@@ -30,17 +30,17 @@ Every project is graded on what its agents are actually allowed to do, not on wh
 
 | Project | Level | Automated stages | Human gates | Factory code | Headline metric | ⭐ |
 |---|---|---|---|---|---|---|
-| [Astro](#withastroastro) | L3 · Pipeline | intake, triage, reproduce, diagnose, implement | merge | open | **200+ → ~30 (−85%)**<br><sub>Open issues (2026-08)</sub> | 64.2k |
-| [Flue](#withastroflue) | L3 · Pipeline | intake, plan, implement, review | decision, merge | open | – | 8.7k |
-| [GitHub Agentic Workflows (gh-aw)](#githubgh-aw) | L3 · Pipeline | intake, triage, implement, review, release, monitor | merge | open | **72 opened, 48 merged (72.7%)**<br><sub>Copilot agent PRs in 24h (daily report) (2026-08-05)</sub> | 5.7k |
-| [Mastra](#mastra-aimastra) | L3 · Pipeline | intake, triage, reproduce, plan, implement, review, docs | decision, merge | open | **25–35%**<br><sub>Share of PRs automated by Factory (since July alpha) (2026-09)</sub> | 29.8k |
-| [Vercel AI SDK](#vercelai) | L3 · Pipeline | intake, triage, reproduce, implement, review, backport, docs | merge | partial | **25–35%**<br><sub>Share of weekly merged PRs authored by the factory (2026-08)</sub> | 28.2k |
-| [Warp](#warpdotdevwarp) | L3 · Pipeline | intake, triage, plan, implement, review, community | spec, merge | closed | – | 66.1k |
-| [.NET runtime](#dotnetruntime) | L2 · On-demand | implement, review, test | trigger, merge | closed | **878 opened, 535 merged (67.9% success)**<br><sub>CCA PRs over ten months (2026-03)</sub> | 18.5k |
-| [career-ops](#career-ops-hqcareer-ops) | L2 · On-demand | triage, review, test, release, community, docs | decision, merge, release, public-comms | closed | **16 PRs merged, ~25 issues triaged, 1 release**<br><sub>In one documented day (2026-07-02)</sub> | 84.8k |
-| [EmDash](#emdash-cmsemdash) 🧪 | L2 · On-demand | reproduce, diagnose, implement | trigger, merge | open | – | 14.6k |
-| [Bootstrap](#twbsbootstrap) | L1 · Triage | triage, reproduce, diagnose, implement | decision, merge, public-comms | unknown | **500+ → 230**<br><sub>Open issues + PRs (2026-10)</sub> | 175.1k |
-| [Metabase](#metabasemetabase) | L1 · Triage | triage, reproduce | trigger, decision | closed | – | 50.5k |
+| [Astro](#withastroastro) | L3 · Pipeline | intake, triage, reproduce, diagnose, implement | merge | open | **200+ → ~30 (−85%)**<br><sub>Open issues (2026-08)</sub> | – |
+| [Flue](#withastroflue) | L3 · Pipeline | intake, plan, implement, review | decision, merge | open | – | – |
+| [GitHub Agentic Workflows (gh-aw)](#githubgh-aw) | L3 · Pipeline | intake, triage, implement, review, release, monitor | merge | open | **72 opened, 48 merged (72.7%)**<br><sub>Copilot agent PRs in 24h (daily report) (2026-08-05)</sub> | – |
+| [Mastra](#mastra-aimastra) | L3 · Pipeline | intake, triage, reproduce, plan, implement, review, docs | decision, merge | open | **25–35%**<br><sub>Share of PRs automated by Factory (since July alpha) (2026-09)</sub> | – |
+| [Vercel AI SDK](#vercelai) | L3 · Pipeline | intake, triage, reproduce, implement, review, backport, docs | merge | partial | **25–35%**<br><sub>Share of weekly merged PRs authored by the factory (2026-08)</sub> | – |
+| [Warp](#warpdotdevwarp) | L3 · Pipeline | intake, triage, plan, implement, review, community | spec, merge | closed | – | – |
+| [.NET runtime](#dotnetruntime) | L2 · On-demand | implement, review, test | trigger, merge | closed | **878 opened, 535 merged (67.9% success)**<br><sub>CCA PRs over ten months (2026-03)</sub> | – |
+| [career-ops](#career-ops-hqcareer-ops) | L2 · On-demand | triage, review, test, release, community, docs | decision, merge, release, public-comms | closed | **16 PRs merged, ~25 issues triaged, 1 release**<br><sub>In one documented day (2026-07-02)</sub> | – |
+| [EmDash](#emdash-cmsemdash) 🧪 | L2 · On-demand | reproduce, diagnose, implement | trigger, merge | open | – | – |
+| [Bootstrap](#twbsbootstrap) | L1 · Triage | triage, reproduce, diagnose, implement | decision, merge, public-comms | unknown | **500+ → 230**<br><sub>Open issues + PRs (2026-10)</sub> | – |
+| [Metabase](#metabasemetabase) | L1 · Triage | triage, reproduce | trigger, decision | closed | – | – |
 
 🧪 = experimental. "Factory code" says whether the factory itself is published (open), partly published (partial) or internal (closed).
 
@@ -54,14 +54,14 @@ Isolated agents in GitHub Actions reproduce, diagnose and propose fixes for ever
 
 - **Factory:** Astro triage bot (triagebot-action + Flue) — code open ([withastro/triagebot-action](https://github.com/withastro/triagebot-action))
 - **Stack:** orchestration: Flue, GitHub Actions; models: Cloudflare Workers AI (Kimi K2.6) for verification; Anthropic/OpenAI pluggable
-- **Check it yourself:** [`is:issue label:"triage: fix verified"`](https://github.com/withastro/astro/issues?q=is%3Aissue+label%3A%22triage%3A+fix+verified%22) — **0** found
+- **Check it yourself:** [`is:issue label:"triage: fix verified"`](https://github.com/withastro/astro/issues?q=is%3Aissue+label%3A%22triage%3A+fix+verified%22)
 - Open issues: **200+ → ~30 (−85%)** (2026-08, [source](https://infoq.com/news/2026/08/cloudflare-astro-ai-agents))
 - _Note:_ Fred Schott calls "fix" the hardest and least essential stage: triage first, hand a report to a human.
 - **Sources:** [How we built a software factory to drive Astro's GitHub issue count to zero (Cloudflare)](https://blog.cloudflare.com/astro-issue-triage/), [Cloudflare Cuts Astro GitHub Issues by 85% with AI Agents (InfoQ)](https://infoq.com/news/2026/08/cloudflare-astro-ai-agents), [Cloudflare Astro triage bot (The New Stack)](https://thenewstack.io/cloudflare-astro-triage-bot/)
 
 ### withastro/flue
 
-**Flue** · L3 · Pipeline · license `Apache-2.0`
+**Flue** · L3 · Pipeline · license `unknown`
 
 Every external PR is auto-closed and turned into an issue or discussion. Once a maintainer decides, agents handle research, design, implementation and first review.
 
@@ -70,7 +70,7 @@ Every external PR is auto-closed and turned into an issue or discussion. Once a 
 
 ### github/gh-aw
 
-**GitHub Agentic Workflows (gh-aw)** · L3 · Pipeline · license `MIT`
+**GitHub Agentic Workflows (gh-aw)** · L3 · Pipeline · license `unknown`
 
 "Peli's Agent Factory": the repo runs its own agentic workflows on itself — Issue Monster feeds issues one at a time to Copilot Coding Agent, Mergefest keeps PR branches current, and a daily agent publishes PR analytics.
 
@@ -101,7 +101,7 @@ Specialised agents classify every incoming issue, then reproduce and fix bugs, i
 
 - **Factory:** ai-sdk-factory — code partial, since 2026-07
 - **Stack:** orchestration: Vercel Functions + Vercel Queues, GitHub webhooks; sandbox: Vercel Sandbox (per-task secrets)
-- **Check it yourself:** [`is:pr author:app/ai-sdk-factory`](https://github.com/vercel/ai/issues?q=is%3Apr+author%3Aapp%2Fai-sdk-factory) — **2228** found
+- **Check it yourself:** [`is:pr author:app/ai-sdk-factory`](https://github.com/vercel/ai/issues?q=is%3Apr+author%3Aapp%2Fai-sdk-factory)
 - Share of weekly merged PRs authored by the factory: **25–35%** (2026-08, [source](https://vercel.com/blog/building-a-software-factory-for-ai-sdk))
 - Share of closed issues closed by the factory: **70–80%** (2026-08, [source](https://vercel.com/blog/building-a-software-factory-for-ai-sdk))
 - Open issues: **1,022 → 844 (late June → early Aug)** (2026-08, [source](https://vercel.com/blog/building-a-software-factory-for-ai-sdk))
@@ -127,7 +127,7 @@ Team members assign scoped issues to GitHub Copilot Coding Agent, which opens PR
 
 - **Factory:** Copilot Coding Agent (CCA) — code closed, since 2025-05
 - **Stack:** agents: GitHub Copilot Coding Agent
-- **Check it yourself:** [`is:pr head:copilot/`](https://github.com/dotnet/runtime/issues?q=is%3Apr+head%3Acopilot%2F) — **1842** found
+- **Check it yourself:** [`is:pr head:copilot/`](https://github.com/dotnet/runtime/issues?q=is%3Apr+head%3Acopilot%2F)
 - CCA PRs over ten months: **878 opened, 535 merged (67.9% success)** (2026-03, [source](https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/))
 - Revert rate of merged CCA PRs: **0.6%** (2026-03, [source](https://startdebugging.net/2026/03/copilot-coding-agent-dotnet-runtime-ten-months-data/))
 - **Sources:** [Ten Months with Copilot Coding Agent in dotnet/runtime (Stephen Toub)](https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/)
@@ -147,13 +147,13 @@ A solo maintainer runs an 80k-star repo with a fleet of Claude Code agents: main
 
 ### emdash-cms/emdash
 
-**EmDash** · L2 · On-demand · license `MIT` · 🧪 experimental
+**EmDash** · L2 · On-demand · license `unknown` · 🧪 experimental
 
 Flue-powered investigation bot started by a maintainer label (bot:repro): it reproduces the issue, labels the outcome, and can push a fix and ask the reporter to verify. Modelled on Astro's setup.
 
 - **Factory:** Investigate bot — code open
 - **Stack:** orchestration: Flue in GitHub Actions
-- **Check it yourself:** [`is:issue label:triage/verified`](https://github.com/emdash-cms/emdash/issues?q=is%3Aissue+label%3Atriage%2Fverified) — **57** found
+- **Check it yourself:** [`is:issue label:triage/verified`](https://github.com/emdash-cms/emdash/issues?q=is%3Aissue+label%3Atriage%2Fverified)
 - **Sources:** [.flue/README.md](https://cdn.jsdelivr.net/gh/emdash-cms/emdash@HEAD/.flue/README.md), [Design rationale (PR](https://github.com/emdash-cms/emdash/pull/1090)
 
 ### twbs/bootstrap
@@ -185,16 +185,16 @@ Open source pieces you can use to build your own factory. Listed only if they co
 
 | Name | Category | License | What it does | Used by | ⭐ |
 |---|---|---|---|---|---|
-| [CXDB](https://github.com/strongdm/cxdb) | context-store | `Apache-2.0` | Self-hosted context store for agents from StrongDM's factory: turn DAG, blob deduplication, dynamic types and visual debugging. | – | 527 |
-| [AgentFactory](https://github.com/supaku/agentfactory) | factory-platform | `MIT` | TypeScript orchestrator for fleets of coding agents (Claude and others) driven from Linear: multi-agent fleet management for a software factory. | – | 66 |
+| [CXDB](https://github.com/strongdm/cxdb) | context-store | `unknown` | Self-hosted context store for agents from StrongDM's factory: turn DAG, blob deduplication, dynamic types and visual debugging. | – | – |
+| [AgentFactory](https://github.com/supaku/agentfactory) | factory-platform | `unknown` | TypeScript orchestrator for fleets of coding agents (Claude and others) driven from Linear: multi-agent fleet management for a software factory. | – | – |
 | [Mastra Factory](https://factory.mastra.ai/) | factory-platform | `unknown` | Open source, configurable factory: connect GitHub, Linear and Slack, define how work moves through stages, run each stage in manual or auto mode. Scaffold with `npm create factory@latest`. | mastra-ai/mastra | – |
-| [Attractor](https://github.com/strongdm/attractor) | spec | `Apache-2.0` | StrongDM's non-interactive coding agent published as natural-language specs (NLSpecs) that your own agent implements. Reference design behind the "lights-out" software factory; several community implementations exist. | – | 1.4k |
+| [Attractor](https://github.com/strongdm/attractor) | spec | `Apache-2.0` | StrongDM's non-interactive coding agent published as natural-language specs (NLSpecs) that your own agent implements. Reference design behind the "lights-out" software factory; several community implementations exist. | – | – |
 | [eve software factory template (Vercel)](https://vercel.fyi/eve-software-factory) | template | `unknown` | One-click deployable open source factory with four agents (Classifier, Analyzer, Implementer, Reviewer), derived from the AI SDK team's setup. | – | – |
-| [software-factory (Jim Bennett / Arize)](https://github.com/jimbobbennett/software-factory) | template | `MIT` | Small reference factory (spec, build, review, release agents with CI and a merge gate) that also evaluates its own prompts; builds the ship-it-card demo app. | – | 2 |
-| [triagebot-action](https://github.com/withastro/triagebot-action) | triage | `unknown` | GitHub Action extracted from Astro's factory: agents reproduce, diagnose and verify issues before a human sees them, driven by a project-specific triage skill in .agents/skills/triage. | withastro/astro | 234 |
-| [Fabro](https://github.com/fabro-sh/fabro) | workflow-engine | `MIT` | Rust implementation of the Attractor ideas: processes as Graphviz DOT graphs with branching, loops and human approval gates, model routing via stylesheets, cloud sandboxes. | – | 1.9k |
-| [Flue](https://github.com/withastro/flue) | workflow-engine | `Apache-2.0` | Framework for durable agent workflows that grew out of Astro's auto-triage; connects agents to GitHub, Slack and more. | withastro/astro, withastro/flue, emdash-cms/emdash | 8.7k |
-| [GitHub Agentic Workflows](https://github.com/github/gh-aw) | workflow-engine | `MIT` | Agentic workflows written in Markdown and run on GitHub Actions; the githubnext/agentics repo ships ready-made workflows (Issue Arborist, Sub Issue Closer, ...). | github/gh-aw | 5.7k |
+| [software-factory (Jim Bennett / Arize)](https://github.com/jimbobbennett/software-factory) | template | `unknown` | Small reference factory (spec, build, review, release agents with CI and a merge gate) that also evaluates its own prompts; builds the ship-it-card demo app. | – | – |
+| [triagebot-action](https://github.com/withastro/triagebot-action) | triage | `unknown` | GitHub Action extracted from Astro's factory: agents reproduce, diagnose and verify issues before a human sees them, driven by a project-specific triage skill in .agents/skills/triage. | withastro/astro | – |
+| [Fabro](https://github.com/fabro-sh/fabro) | workflow-engine | `unknown` | Rust implementation of the Attractor ideas: processes as Graphviz DOT graphs with branching, loops and human approval gates, model routing via stylesheets, cloud sandboxes. | – | – |
+| [Flue](https://github.com/withastro/flue) | workflow-engine | `unknown` | Framework for durable agent workflows that grew out of Astro's auto-triage; connects agents to GitHub, Slack and more. | withastro/astro, withastro/flue, emdash-cms/emdash | – |
+| [GitHub Agentic Workflows](https://github.com/github/gh-aw) | workflow-engine | `unknown` | Agentic workflows written in Markdown and run on GitHub Actions; the githubnext/agentics repo ships ready-made workflows (Issue Arborist, Sub Issue Closer, ...). | github/gh-aw | – |
 
 ## Inclusion criteria
 
