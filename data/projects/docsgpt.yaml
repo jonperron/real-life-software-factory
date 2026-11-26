@@ -1,0 +1,41 @@
+name: DocsGPT
+repo: arc53/DocsGPT
+license: MIT
+status: production
+summary: >-
+  Two agents built on DocsGPT itself do the first pass on every issue and PR:
+  a triage agent labels, assigns and answers within minutes, and a code review
+  agent runs each PR's tests in a sandbox and sends maintainers a verdict.
+factory:
+  level: 3
+  stages: [intake, triage, review]
+  human_gates: [decision, merge]
+  factory_code: open
+  factory_repo: arc53/DocsGPT
+  stack:
+    orchestration: GitHub Actions (triage.yml) + docsgpt-cli relay.py, GitHub MCP server
+    agents: DocsGPT-built triage agent (arc53-machine), DocsGPT-built code review agent
+  bots: [arc53-machine]
+metrics:
+  - label: Median first response on contributor PRs (Oct 2025 vs Oct 2026)
+    value: "17 hours -> 6 minutes"
+    as_of: "2026-10"
+    source: https://www.docsgpt.cloud/blog/github-triage-agents
+  - label: Contributor PRs merged (Oct 2025 vs Oct 2026)
+    value: "29 -> 54"
+    as_of: "2026-10"
+    source: https://www.docsgpt.cloud/blog/github-triage-agents
+  - label: Combined monthly cost for both agents
+    value: "~$116/month (~$0.10/triage run, <$1/review)"
+    as_of: "2026-10"
+    source: https://www.docsgpt.cloud/blog/github-triage-agents
+sources:
+  - title: "How We Triage GitHub Issues and PRs With AI Agents (DocsGPT)"
+    url: https://www.docsgpt.cloud/blog/github-triage-agents
+    date: 2026-11-17
+notes: >-
+  The code review agent is read-only on GitHub and cannot approve, merge or
+  close PRs (GitHub refuses the token that permission); only labels, comments
+  and assignments are automated. A human still merges every change. The
+  triage agent's prompts and workflow are public under .github/triage in the
+  repo.
